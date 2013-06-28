@@ -15,6 +15,7 @@ ext {
     jsonPathVersion = '0.8.1'
     servletVersion = '3.0.1'
     springDataNeo4jVersion = '2.2.1.RELEASE'
+    neo4jVersion = '1.8.1'
 }
 
 repositories {
@@ -35,7 +36,8 @@ configurations {
     all*.exclude group: 'log4j'
     all*.exclude group: 'slf4j'
     all*.exclude group: 'junit'
-    all*.exclude group: 'org.hamcrest'
+    all*.exclude module: 'hamcrest-core'
+    all*.exclude module: 'junit-dep'
     all*.exclude module: 'neo4j-cypher-dsl'
 }
 
@@ -52,11 +54,12 @@ dependencies {
     runtime "org.slf4j:jul-to-slf4j:${slf4jVersion}"
     runtime "org.slf4j:log4j-over-slf4j:${slf4jVersion}"
 
-    testCompile"junit:junit:${junitVersion}"
+    testCompile "junit:junit:${junitVersion}"
     testCompile "org.hamcrest:hamcrest-all:${hamcrestVersion}"
     testCompile "org.spockframework:spock-core:${spockVersion}"
     testCompile "org.spockframework:spock-spring:${spockVersion}"
     testCompile "org.springframework:spring-test:${springFrameworkVersion}"
+    testCompile "org.neo4j:neo4j-kernel:${neo4jVersion}:tests"
 }
 
 task wrapper(type: Wrapper) {
