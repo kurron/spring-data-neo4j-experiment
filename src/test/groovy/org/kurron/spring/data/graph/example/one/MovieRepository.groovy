@@ -7,4 +7,6 @@ import org.springframework.data.neo4j.repository.GraphRepository
  */
 public interface MovieRepository extends GraphRepository<Movie> {
 
+    // a custom query method
+    Movie getMovieById( String id )
 }

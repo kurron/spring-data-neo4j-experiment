@@ -80,4 +80,25 @@ class SpringDataIntegrationTest extends Specification {
 
         cleanup: 'close the database'
     }
+
+    @Transactional
+    void 'exercise custom query method'() {
+        given: 'valid repository'
+        assert movieRepository != null
+
+        when: 'database is used'
+        Movie detached = new Movie()
+        detached.id = 'uuid'
+        detached.title = 'Forrest Gump'
+        detached.year = 1994
+        Movie attached = template.save( detached )
+        Movie fetched = movieRepository.getMovieById( detached.id )
+
+        then: 'we should see data'
+        assertThat( attached.nodeId, is( equalTo( fetched.nodeId ) )  )
+        assertThat( detached.title, is( equalTo( fetched.title ) )  )
+        assertThat( detached.year, is( equalTo( fetched.year ) )  )
+
+        cleanup: 'close the database'
+    }
 }
