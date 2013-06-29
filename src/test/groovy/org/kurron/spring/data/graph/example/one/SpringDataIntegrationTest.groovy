@@ -15,6 +15,7 @@ import static org.hamcrest.Matchers.*
 class SpringDataIntegrationTest extends Specification {
 
     @Autowired Neo4jTemplate template
+    @Autowired MovieRepository movieRepository
 
     @Transactional
     void 'exercise insert and retrieve'() {
@@ -50,6 +51,27 @@ class SpringDataIntegrationTest extends Specification {
         Movie attached = template.save( detached )
         GraphRepository<Movie> repository = template.repositoryFor( Movie )
         Movie fetched = repository.findByPropertyValue( 'id' , detached.id )
+
+        then: 'we should see data'
+        assertThat( attached.nodeId, is( equalTo( fetched.nodeId ) )  )
+        assertThat( detached.title, is( equalTo( fetched.title ) )  )
+        assertThat( detached.year, is( equalTo( fetched.year ) )  )
+
+        cleanup: 'close the database'
+    }
+
+    @Transactional
+    void 'exercise movie repository'() {
+        given: 'valid repository'
+        assert movieRepository != null
+
+        when: 'database is used'
+        Movie detached = new Movie()
+        detached.id = 'uuid'
+        detached.title = 'Forrest Gump'
+        detached.year = 1994
+        Movie attached = template.save( detached )
+        Movie fetched = movieRepository.findByPropertyValue( 'id' , detached.id )
 
         then: 'we should see data'
         assertThat( attached.nodeId, is( equalTo( fetched.nodeId ) )  )
