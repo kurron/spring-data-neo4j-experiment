@@ -53,12 +53,12 @@ dependencies {
     compile "org.springframework:spring-tx:${springFrameworkVersion}"
     compile "org.springframework:spring-context:${springFrameworkVersion}"
     compile "org.springframework:spring-aspects:${springFrameworkVersion}"
+    compile "org.hibernate:hibernate-validator:5.0.1.Final"
 
     compile "org.neo4j:neo4j:${neo4jVersion}"
 
     runtime "org.slf4j:jul-to-slf4j:${slf4jVersion}"
     runtime "org.slf4j:log4j-over-slf4j:${slf4jVersion}"
-    runtime "org.hibernate:hibernate-validator:5.0.1.Final"
 
     testCompile "junit:junit:${junitVersion}"
     testCompile "org.hamcrest:hamcrest-all:${hamcrestVersion}"

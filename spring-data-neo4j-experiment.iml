@@ -31,10 +31,10 @@
     <orderEntry type="library" exported="" name="aspectjrt-1.7.2" level="project" />
     <orderEntry type="library" scope="TEST" name="spock-core-0.7-groovy-2.0" level="project" />
     <orderEntry type="library" scope="TEST" name="junit-4.11" level="project" />
-    <orderEntry type="library" exported="" scope="RUNTIME" name="jboss-logging-3.1.1.GA" level="project" />
-    <orderEntry type="library" exported="" scope="RUNTIME" name="validation-api-1.1.0.Final" level="project" />
-    <orderEntry type="library" exported="" scope="RUNTIME" name="hibernate-validator-5.0.1.Final" level="project" />
-    <orderEntry type="library" exported="" scope="RUNTIME" name="classmate-0.8.0" level="project" />
+    <orderEntry type="library" exported="" name="jboss-logging-3.1.1.GA" level="project" />
+    <orderEntry type="library" exported="" name="validation-api-1.1.0.Final" level="project" />
+    <orderEntry type="library" exported="" name="hibernate-validator-5.0.1.Final" level="project" />
+    <orderEntry type="library" exported="" name="classmate-0.8.0" level="project" />
     <orderEntry type="library" exported="" name="spring-core-3.2.3.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="spring-expression-3.2.3.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="spring-context-3.2.3.RELEASE" level="project" />
