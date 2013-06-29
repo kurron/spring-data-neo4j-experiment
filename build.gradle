@@ -15,7 +15,7 @@ ext {
     jsonPathVersion = '0.8.1'
     servletVersion = '3.0.1'
     springDataNeo4jVersion = '2.2.1.RELEASE'
-    neo4jVersion = '1.8.1'
+    neo4jVersion = '1.9.1'
     cglibVersion = '3.0'
     asmVersion = '4.0'
 }
@@ -54,6 +54,8 @@ dependencies {
     compile "org.springframework:spring-tx:${springFrameworkVersion}"
     compile "org.springframework:spring-context:${springFrameworkVersion}"
     compile "org.springframework:spring-aspects:${springFrameworkVersion}"
+
+    compile "org.neo4j:neo4j:${neo4jVersion}"
 
     runtime "org.slf4j:jul-to-slf4j:${slf4jVersion}"
     runtime "org.slf4j:log4j-over-slf4j:${slf4jVersion}"

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="neo4j-cypher-1.9.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/artifacts-24/filestore/org.neo4j/neo4j-cypher/1.9.1/jar/d1ca06cf5c8b878980e1cb62f48fcd3c854951c0/neo4j-cypher-1.9.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/artifacts-24/filestore/org.neo4j/neo4j-cypher/1.9.1/source/b9d9183dd1851f8e587dba9b645e8860a8732482/neo4j-cypher-1.9.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

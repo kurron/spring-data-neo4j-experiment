@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="neo4j-kernel-1.9.1-tests">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/artifacts-24/filestore/org.neo4j/neo4j-kernel/1.9.1/jar/42b5447c0d45d817e025c54f465244a0c64201f/neo4j-kernel-1.9.1-tests.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
