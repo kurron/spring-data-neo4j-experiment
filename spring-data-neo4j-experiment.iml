@@ -56,6 +56,7 @@
     <orderEntry type="library" exported="" name="neo4j-jmx-1.9.1" level="project" />
     <orderEntry type="library" exported="" name="neo4j-kernel-1.9.1" level="project" />
     <orderEntry type="library" exported="" name="neo4j-graph-matching-1.9.1" level="project" />
+    <orderEntry type="library" exported="" name="neo4j-cypher-dsl-1.9.M04" level="project" />
   </component>
 </module>
 

@@ -23,6 +23,9 @@ ext {
 repositories {
     mavenCentral()
     maven {
+        url "http://m2.neo4j.org"
+    }
+    maven {
         url "http://repo.springsource.org/libs-release"
     }
     maven {
@@ -39,7 +42,6 @@ configurations {
     all*.exclude group: 'slf4j'
     all*.exclude module: 'hamcrest-core'
     all*.exclude module: 'junit-dep'
-    all*.exclude module: 'neo4j-cypher-dsl'
 }
 
 dependencies {
